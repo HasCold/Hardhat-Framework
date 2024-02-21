@@ -1,0 +1,17 @@
+Hardhat :-
+
+- Hardhat has a faster migration process as compared to the Truffle.
+- Less gas consumption during the migration.
+- Debugging is easy.
+- We can also write JavaScript code in to the Hardhat.
+
+
+We are using the Mocha-Chai Library to perform the testing in hardhat.
+
+
+Install Testing Libraries Cmd :- 
+npm i --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai 
+
+
+Compilation Command :- npx hardhat compile   // Through this way we can compile our Hardhat code
+Test Command :- npx hardhat test
