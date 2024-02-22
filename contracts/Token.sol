@@ -1,7 +1,8 @@
-// SPDX-License-Identifier: GPL-3.0
-pragma solidity >= 0.5.0 < 0.9.0;
+// SPDX-License-Identifier: UNLICENSED
 
-import "hardhat/console.sol";
+pragma solidity ^0.8.0;
+
+// import "hardhat/console.sol";
 
 contract Token {
     string public name = "Hardhat Token";
@@ -18,11 +19,10 @@ contract Token {
     }
 
     function transfer(address to, uint amount) external {
-        console.log("**Sender balance is %s token", balances[msg.sender]);
-        console.log("**Sender is sending %s tokens to %s address", amount, to);
+        // console.log("**Sender balance is %s token", balances[msg.sender]);
+        // console.log("**Sender is sending %s tokens to %s address", amount, to);
 
         require(balances[msg.sender] >= amount, "Not enough tokens");  // Check the coming amount is not greater than the already existing  balance account
-
         balances[msg.sender] -= amount;   // balances[msg.sender] = balances[msg.sender] - amount;  Deduct the main balance amount from the incoming amount
         balances[to] += amount; // However, directly assigning the value like in this way balances[to] = amount; would overwrite any existing balance the recipient might have had.
     }

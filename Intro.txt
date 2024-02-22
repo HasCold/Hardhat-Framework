@@ -15,3 +15,5 @@ npm i --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethe
 
 Compilation Command :- npx hardhat compile   // Through this way we can compile our Hardhat code
 Test Command :- npx hardhat test
+Deploy the contract on hardhat network :- npx hardhat run scripts/deploy.js  
+After configuring the network keys :- npx hardhat run scripts/deploy.js --network sepolia
